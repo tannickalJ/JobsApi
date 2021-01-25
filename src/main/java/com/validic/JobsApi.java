@@ -48,10 +48,6 @@ public class JobsApi {
         for (int i = 0; i < cities.size(); i++) {
             ub.addParameter("location", cities.get(i));
             for (int j = 0; j < langs.size(); j++) {
-//                if (langs.get(j) == null) {
-//                   // System.out.println("No " + langs.get(j) + " from " + cities.get(i));
-//                    continue;
-//                }
                 ub.addParameter("description", langs.get(j));
                 URL url = new URL(ub.toString());
                 con = (HttpURLConnection) url.openConnection();
